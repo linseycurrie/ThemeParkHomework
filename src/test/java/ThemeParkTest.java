@@ -54,10 +54,10 @@ public class ThemeParkTest {
         assertEquals(1,visitor.getVisitedAttractionsSize());
         }
 
-        @Test
-        public void hashMapwithReviewsIsCreated(){
-        themePark.allReviews();
-        assertEquals(4, themePark.getSizeOfReviewedHashMap());
-        }
+//        @Test
+//        public void hashMapwithReviewsIsCreated(){
+//        themePark.allReviews();
+//        assertEquals(4, themePark.getSizeOfReviewedHashMap());
+//        }
 
 }

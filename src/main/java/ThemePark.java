@@ -11,13 +11,12 @@ public class ThemePark {
     private ArrayList<Attraction> attractions;
     private ArrayList<Stall> stalls;
     private ArrayList<IReviewed> reviewed;
-    private HashMap<String, Integer> reviewHashMap;
+
 
     public ThemePark(ArrayList<Attraction> attractions, ArrayList<Stall> stalls) {
         this.attractions = attractions;
         this.stalls = stalls;
         this.reviewed = new ArrayList<>();
-        reviewHashMap = new ArrayList<>();
     }
 
     public ArrayList<Attraction> getAttractions() {
@@ -60,15 +59,14 @@ public class ThemePark {
     }
 
     public HashMap<String, Integer> allReviews(){
+        private HashMap<String, Integer> reviewHashMap = new HashMap<>();
         for( IReviewed reviews: reviewed){
             reviewHashMap.put(reviews.getName(), reviews.getRating());
         }
         return reviewHashMap;
     }
 
-    public int getSizeOfReviewedHashMap(){
-        return this.reviewHashMap.size();
-    }
+
 }
 
 
